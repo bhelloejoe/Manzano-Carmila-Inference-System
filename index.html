@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="css/style3.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Ablat's Pension House</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Ablat's Pension House</h1>
+            <p>Your perfect stay awaits. Book your dream hotel today!</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>Hotel Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item" onclick="showBookingForm()">
+                <img src="css/room10.jpg" alt="Room 1">
+            </div>
+            <div class="gallery-item" onclick="showBookingForm()">
+                <img src="css/room4.jpg" alt="Room 2">
+            </div>
+            <div class="gallery-item" onclick="showBookingForm()">
+                <img src="css/room7.jpg" alt="Room 3">
+            </div>
+            <div class="gallery-item" onclick="showBookingForm()">
+                <img src="css/room6.jpg" alt="Hotel Lobby">
+            </div>
+            <div class="gallery-item" onclick="showBookingForm()">
+                <img src="css/room3.jpg" alt="Swimming Pool">
+            </div>
+            <div class="gallery-item" onclick="showBookingForm()">
+                <img src="css/room2.jpg" alt="Restaurant">
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <div class="booking-container" id="booking-form">
+        <div class="close">
+            <span onclick="hideBookingForm()">X</span>
+        </div>
+        <form method="POST">
+            <label for="guest">Name of Guest:</label>
+            <input type="text" id="guest" name="guest" required>
+
+            <label for="check-in">Check-in Date:</label>
+            <input type="date" id="check_in" name="check_in" required>
+
+            <label for="check-out">Check-out Date:</label>
+            <input type="date" id="check_out" name="check_out" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>P-6, Pag-Antayan, Cantilan, Surigao del Sur</p>
+        <p>Mobile: 09197976448</p>
+        <p>Landline: 212-5594</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Ablat's Pension House. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function hideBookingForm() {
+            document.getElementById('booking-form').style.display = 'none';
+        }
+
+        function showBookingForm() {
+            document.getElementById('booking-form').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
